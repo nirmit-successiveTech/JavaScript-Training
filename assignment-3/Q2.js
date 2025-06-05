@@ -5,10 +5,10 @@
 //    7 8 9 10
 
 
-var c=1;
-for(var i=1;i<=4;i++){
-    var mystr=" ";
-    for(var j=1;j<=i;j++){
+let c=1;
+for(let i=1;i<=4;i++){
+    let mystr=" ";
+    for(let j=1;j<=i;j++){
         mystr+=c;
         c++;
     }
@@ -21,11 +21,10 @@ for(var i=1;i<=4;i++){
 // 3 3 3
 // 4 4 4
 
-var cnt=0;
-for(var i=1;i<=4;i++){
-    var mystr="";
-    cnt++;
-    for(var j=1;j<=cnt;j++){
+
+for(let i=1;i<=4;i++){
+    let mystr="";
+    for(var j=1;j<=i;j++){
         mystr+=i;
     }
     console.log(mystr)
@@ -44,17 +43,17 @@ for(var i=1;i<=4;i++){
 // 1 2 3 4
 // 1 2 3 4 5
 
-for(var i=5;i>=1;i--){
-    var mystr=" ";
-    for(var j=1;j<=i;j++){
+for(let i=5;i>=1;i--){
+    let mystr=" ";
+    for(let j=1;j<=i;j++){
         mystr+=j;
     }
     console.log(mystr);
 }
 
-for(var i=2;i<=5;i++){
-    var mystr=" ";
-    for(var j=1;j<=i;j++){
+for(let i=2;i<=5;i++){
+    let mystr=" ";
+    for(let j=1;j<=i;j++){
         mystr+=j;
     }
     console.log(mystr)

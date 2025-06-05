@@ -1,9 +1,9 @@
-var a=[];
-var c;
+let a=[];
+let c;
 
-for(var i=1;i<=50;i++){
+for(let i=1;i<=50;i++){
     c=0;
-    for(var j=1;j<=50;j++){
+    for(let j=1;j<=50;j++){
         if(i%j==0){
             c++;
         }

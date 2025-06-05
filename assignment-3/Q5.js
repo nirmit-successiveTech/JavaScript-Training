@@ -1,7 +1,7 @@
-var a1=[];
-var a2=[];
+let a1=[];
+let a2=[];
 
-for(var i=0;i<25;i++){
+for(let i=0;i<25;i++){
     if(i%2==0){
         a1.push(i)
     }else{
