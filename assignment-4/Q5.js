@@ -1,27 +1,23 @@
-var str="hello john doe"
 
-let i=str.length;
+let a = "  a          hello   john   doe"
 
-var ans="";
-for(var j=i-1;j>=0;j--){
-    if(str[j-1]==' '){
-        ans=str[j].toUpperCase()+ans;
+let str = '';
+
+let ans = a.trim();
+
+for(let i=0;i<ans.length;i++){
+    if(i==0){
+        str+=ans[i];
     }
-    else{
-        ans=str[j]+ans;
-    }
-}
-
-console.log(ans.length)
-var ans2="";
-
-for(var k=0;k<ans.length;k++){
-    if(ans[k]==' '){
+    else if(ans[i]==' '){
         continue;
     }
+    else if(ans[i]!=' ' && ans[i-1]==' '){
+        str += ans[i].toUpperCase();
+    }
     else{
-        ans2+=ans[k];
+        str += ans[i];
     }
 }
 
-console.log(ans2)
+console.log(str)
