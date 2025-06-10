@@ -1,7 +1,6 @@
 
 
 let str="Hello John"
-// console.log(str.length)
 
     let a="";
     let b="";
@@ -12,7 +11,6 @@ for(let i=str.length-1;i>=0;i--){
     if(str[i]==' '){
         b = b+a;
         b=" "+b;
-        // a += "";
         a= " ";
     }else{
         a=a+str[i];   

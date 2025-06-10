@@ -1,11 +1,15 @@
 let str = "Hello Yellow"
 
-let b= new Set(str);
+let newStr= new Set(str);
 
 
 let ans="";
-for(let i of b){
+const removeDuplicate = (newStr) =>{
+    for(let i of newStr){
     ans+=i;
+    }
+    return ans;
 }
 
-console.log(ans)
+const result = removeDuplicate(newStr);
+console.log(result);

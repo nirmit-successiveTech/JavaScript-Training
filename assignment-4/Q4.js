@@ -1,27 +1,37 @@
-var str="hello john doe"
+// 4. Write a program to convert given string to upperCase OR lowerCase
 
-let i=str.length;
 
-var ans="";
-for(var j=i-1;j>=0;j--){
-    if(str[j-1]==' '){
-        ans=str[j].toUpperCase()+ans;
+let str = "nirmit";
+let mystr ="KUMAR"
+
+const upperCase = (str) =>{
+    let ans = "";
+    let c = '';
+    for(let i=0;i<str.length;i++){
+        let j = str.charCodeAt(i);
+        j=j-32;
+        c = String.fromCharCode(j);
+        ans += c;
     }
-    else{
-        ans=str[j]+ans;
-    }
+    return ans;
 }
 
-console.log(ans.length)
-var ans2="";
-
-for(var k=0;k<ans.length;k++){
-    if(ans[k]==' '){
-        continue;
+const lowerCase = (str) =>{
+    let ans = "";
+    let c = '';
+    for(let i=0;i<mystr.length;i++){
+        let j = str.charCodeAt(i);
+        j=j+32;
+        c = String.fromCharCode(j);
+        ans += c;
     }
-    else{
-        ans2+=ans[k];
-    }
+    return ans;
 }
 
-console.log(ans2)
+
+
+const ans1 = upperCase(str);
+const ans2 = lowerCase(mystr);
+
+console.log(ans1);
+console.log(ans2);

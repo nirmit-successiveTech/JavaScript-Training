@@ -1,9 +1,11 @@
 let a=[1,2,3,4,5]
 
 let sum=0;
-
-for(let i of a){
-    sum=sum+i
+const addNum=(a)=>{
+    for(let i of a){
+        sum += i;
+    }
+    return sum;
 }
 
-console.log(sum)
+console.log(addNum(a));
