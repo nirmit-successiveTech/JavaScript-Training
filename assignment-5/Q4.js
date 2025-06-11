@@ -11,17 +11,45 @@ const person = {
     height: "175",
   },
   arr: [1, 2, 3],
-  fn: function () {
-    return this.name;
-  },
 };
-const obj = {};
-const createDeepCopy = (person, obj) => {
-  for (let i in person) {
-    obj[i] = person[i];
-  }
+
+const createDeepCopy = (person) => {
+  let obj;
+  obj = structuredClone(person);
   return obj;
 };
 
-const result = createDeepCopy(person, obj);
-console.log(result);
+const result = createDeepCopy(person);
+result.arr[0]=5
+
+console.log(result);   //deep copied object
+
+console.log(person);   // original object
+
+
+
+
+// using recursive approach
+
+function deepcopy(person){
+    let obj=[];
+    if(!Array.isArray(person)){
+         obj={};
+    }else{
+         obj=[];
+    }
+    for(let i in person){
+        if(typeof(person[i])=='object'){
+            obj[i]=deepcopy(person[i])
+        }else{
+            obj[i]=person[i];
+        }
+    }
+    return obj;
+}
+
+let ans=deepcopy(person);
+ans.arr[0]=8;
+
+console.log(ans)
+console.log(person)
