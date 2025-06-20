@@ -1,0 +1,2 @@
+# LODASH
+Lodash a javascript libray that works on number,array,strings etc.Licensed by MIT Lodash performs set of operation to be performed on the given data type without needing to dwelve into the core, thus reducing time and increasing efficiency.
